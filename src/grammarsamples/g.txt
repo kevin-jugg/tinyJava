@@ -1,0 +1,23 @@
+public class myStack &
+int[] myStack;
+int test;
+
+public myStack(int size) {
+this.myStack = new int[size];
+this.test = 0;
+}
+
+Public int size() {
+test = 1;
+return test;
+}
+&
+
+PROGRAM ::= "public class" String "{" STATEMENT* "}"
+STATEMENT ::= VARDEC* CONSTRUCTOR METHOD*
+VARDEC ::= (VARTYPE | VARTYPEARRAY) STRING ";"
+CONSTRUCTOR ::= "public" string "(" ((VARTYPE|VARTYPEARRAY string) | "") ")" "{" [VARDEF|""]* "}"
+VARDEF ::= "this." STRING "=" [[INT | STRING | BOOLEAN] | "new" VARTYPE "[" INT "]"] ";"
+METHOD ::= "public" [VARTYPE|VARTYPEARRAY|"void"] STRING "(" ([VARTYPE|VARTYPEARRAY] STRING)(0or1) ")" "{" "}"
+VARTYPE ::= [int | string | boolean]
+VARTYPEARRAY ::= [int[] | string[] | boolean[]]
